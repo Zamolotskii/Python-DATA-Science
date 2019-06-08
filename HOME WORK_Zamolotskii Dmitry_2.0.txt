@@ -1,0 +1,72 @@
+***_____________Lesson 1.0_______________***
+
+
+______________________________TASK_2
+CREATE DATABASE example
+USE example
+CREATE TABLE IF NOT EXISTS users(
+	ID INT,
+	Name VARCHAR);
+
+______________________________TASK_3 
+CREATE DATABASE sample;
+\q
+mysqldump -u root -p example > xxx.sql
+******
+mysql new < xxx.sql -uroot -p******
+
+______________________________CHECK:
+#mysql -u root -p
+******
+
+SHOW TADABASES;
+USE sample;
+SHOW TABLES FROM sample;
+
+
+______________________________TASK_4
+mysqldump -u root -p mysql help_keyword --where'1 LIMIT 100' > help_keyword_100.sql
+******
+
+
+
+***_____________Lesson 2.0_______________***
+
+______________________________TASK_2
+
+CREATE DATABASES media;
+USE DATABASE media;
+create table Photo(
+    keywords    varchar(100) not null default '',
+    user        varchar(25) not null,
+    path        varchar(100) not null,
+    discription varchar(100),
+    name        varchar(50) not null
+);
+
+create table audio(
+    keywords  varchar(100) not null default '',
+    user      varchar(25) not null,
+    path      varchar(100) not null,
+    discribe  varchar(100),
+    name      varchar(50) not null
+);
+
+create table video(
+    keywords  varchar(100) not null default '',
+    user      varchar(25) not null,
+    way       varchar(100) not null,
+    discribe  varchar(100),
+    name      varchar(50) not null
+);
+
+______________________________TASK_3
+
+INSERT INTO
+	sample.cat
+SELECT
+	id, name
+FROM
+	shop;
+
+
